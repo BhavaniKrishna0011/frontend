@@ -117,12 +117,12 @@
                 category: e.target[3].value,
                 price: e.target[4].value,
             }
-            const response = await fetch("http://localhost:5000/library/addbook", {
+            const response = await fetch("http://localhost:5000/backend_dbms/controller/book_add_query.js", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(data)
+                body: JSON.stringify(data)  
             });
             if (response.status == 200) {
                 window.location.href = "adminDashboard.html";
